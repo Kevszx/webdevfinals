@@ -8,13 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
     loginForm.addEventListener('submit', (e) => {
         e.preventDefault(); // Prevent form from submitting
 
-        // Clear previous error messages
+        
         usernameError.textContent = '';
         passwordError.textContent = '';
 
         let isValid = true;
 
-        // Username validation
+        
         if (usernameInput.value.trim() === '') {
             usernameError.textContent = 'Username is required.';
             isValid = false;
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // Password validation
+        
         if (passwordInput.value.trim() === '') {
             passwordError.textContent = 'Password is required.';
             isValid = false;
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             isValid = false;
         }
 
-        // If form is valid, log success message (or handle authentication logic)
+        
         if (isValid) {
             alert('Login successful!');
             loginForm.reset(); // Clear form inputs
